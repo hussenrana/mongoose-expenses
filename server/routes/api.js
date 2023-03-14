@@ -17,20 +17,7 @@ router.get("/expenses", function (req, res) {
       .then(function (expenses) {
         res.send(expenses);
       });
-  }
-
-  //   if (d1 || d2) {
-  //     const dToday = d1 ? d1 : d2;
-  //     const d = moment(dToday).format("LLLL");
-  //     Expense.find({
-  //       date: { $gt: d },
-  //     })
-  //       .sort({ date: -1 })
-  //       .then(function (expenses) {
-  //         res.send(expenses);
-  //       });
-  //   }
-  else {
+  } else {
     Expense.find({})
       .sort({ date: -1 })
       .then(function (expenses) {
